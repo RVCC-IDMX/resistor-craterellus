@@ -35,8 +35,6 @@ calc.addEventListener("click", (evt) => {
     bands.tolerance = classList[1];
     bandFour.setAttribute("class", `band ${bands.tolerance}`);
   }
-  console.log(bands);
   const getValue = getResistorOhms(bands);
-  console.log(getValue);
   document.querySelector(".answer").innerText = getValue;
 });
