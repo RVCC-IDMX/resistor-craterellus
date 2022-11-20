@@ -37,7 +37,16 @@ calc.addEventListener("click", (evt) => {
   console.log(bands);
   const getValue = getResistorOhms(bands);
   console.log(getValue);
+  document.querySelector(".answer").innerText = getValue;
 });
+
+// const resText = document.querySelector(".answer");
+// restText.innerText = 'meow';
+
+// document.querySelector(".answer").innerText = 'meow';
+
+
+// document.getElementById("answer").innerHTML = "New text!";
 
 
 // const getValue = getResistorOhms(bands);
