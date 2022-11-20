@@ -9,58 +9,34 @@ const bands = {
 }
 
 
-// const meep = document.querySelector('#color0 .black');
-// meep.addEventListener("click", myFunction);
-
-// function myFunction() {
-//     alert ("Hello World!");
-//   }
-
 const calc = document.querySelector('.calculator');
 
 calc.addEventListener("click", (evt) => {
   const target = evt.target;
   const classList = evt.target.classList;
   const parent = evt.target.parentElement.id;
+  const bandOne = document.querySelector('#b0');
+  const bandTwo = document.querySelector('#b1');
+  const bandThree = document.querySelector('#b2');
+  const bandFour = document.querySelector('#b3');
   if(parent === 'color0'){
-  bands.color1 = classList[1];
+    bands.color1 = classList[1];
+    bandOne.setAttribute("class", `band ${bands.color1}`);
   }
   else if (parent === 'color1') {
     bands.color2 = classList[1];
+    bandTwo.setAttribute("class", `band ${bands.color2}`);
   }
   else if (parent === 'color2') {
     bands.multiplier = classList[1];
+    bandThree.setAttribute("class", `band ${bands.multiplier}`);
   }
   else if (parent === 'color3') {
     bands.tolerance = classList[1];
+    bandFour.setAttribute("class", `band ${bands.tolerance}`);
   }
   console.log(bands);
   const getValue = getResistorOhms(bands);
   console.log(getValue);
   document.querySelector(".answer").innerText = getValue;
 });
-
-// const resText = document.querySelector(".answer");
-// restText.innerText = 'meow';
-
-// document.querySelector(".answer").innerText = 'meow';
-
-
-// document.getElementById("answer").innerHTML = "New text!";
-
-
-// const getValue = getResistorOhms(bands);
-// console.log(getValue);
-
-
-// const color1 = document.querySelector('#color0');
-
-// color1.addEventListener("click", (evt) => {
-  // console.log(evt);
-//     const target = evt.target;
-//     const classList = evt.target.classList;
-    // console.log(classList)
-    // console.log(classList[1])
-//   const parent = evt.target.parentElement;
-//   console.log(parent);
-// });
