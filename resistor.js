@@ -218,11 +218,8 @@ function getResistorOhms(bands) {
   return finalValue;
 }
 
-module.exports = {
-  getColorValue,
-  getMultiplierValue,
-  getThreeBandValue,
-  formatNumber,
-  getTolerance,
-  getResistorOhms,
-};
+// module.exports = {
+//   getResistorOhms,
+// };
+
+export { getResistorOhms };

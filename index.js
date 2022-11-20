@@ -1,4 +1,4 @@
-// import { getResistorOhms } from './resistor.js';
+import { getResistorOhms } from './resistor.js';
 
 
 const bands = {
@@ -7,6 +7,7 @@ const bands = {
     multiplier: 'violet',
     tolerance: 'gold',
 }
+
 
 // const meep = document.querySelector('#color0 .black');
 // meep.addEventListener("click", myFunction);
@@ -18,11 +19,9 @@ const bands = {
 const calc = document.querySelector('.calculator');
 
 calc.addEventListener("click", (evt) => {
-    const target = evt.target;
-    const classList = evt.target.classList;
-  console.log(classList[1])
+  const target = evt.target;
+  const classList = evt.target.classList;
   const parent = evt.target.parentElement.id;
-  console.log(parent);
   if(parent === 'color0'){
   bands.color1 = classList[1];
   }
@@ -36,7 +35,13 @@ calc.addEventListener("click", (evt) => {
     bands.tolerance = classList[1];
   }
   console.log(bands);
+  const getValue = getResistorOhms(bands);
+  console.log(getValue);
 });
+
+
+// const getValue = getResistorOhms(bands);
+// console.log(getValue);
 
 
 // const color1 = document.querySelector('#color0');
